@@ -34,6 +34,11 @@ jobs:
         run: go test -v ./test/dummy1/...
       - name: Race detecor dummy1
         run: go test -race ./test/dummy1/...
+      - name: CodeCov
+        run: go test -cover ./...  -coverprofile=coverage.out -coverpkg=$(go list ./internal/dummy1/... ./internal/pkg/... | grep -v test | tr "\n" ",") -covermode=atomic
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v1
+
 
   dummy2GoTest:
     name: Dummy2GoTest
