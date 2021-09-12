@@ -1,5 +1,9 @@
 package dummy2
 
-func foo(str string) string {
+func Foo(str string) string {
 	return "hello " + str
+}
+
+func Zoo(str string) string {
+	return "bye " + str
 }
