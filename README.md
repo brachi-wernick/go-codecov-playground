@@ -1,1 +1,1 @@
-# go-codecov-playground
+# go-playground
