@@ -69,5 +69,5 @@ jobs:
         run: go test -race ./test/dummy2/...
       - name: CodeCov
         run: go test -cover ./test/dummy2/...  -coverprofile=coverage.out -coverpkg=$(go list ./internal/dummy2/... ./internal/pkg/... | grep -v test | tr "\n" ",") -covermode=atomic  -coverprofile=dummy2.coverage.out
-     - name: Upload coverage to Codecov
-       uses: codecov/codecov-action@v1
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v1
