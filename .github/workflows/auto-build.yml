@@ -62,7 +62,7 @@ jobs:
               dep ensure
           fi
       - name: Build dummy2
-        run: go build -v router/cmd/dummy2
+        run: go build -v playground/cmd/dummy2
       - name: Test dummy2
         run: go test -v ./test/dummy2/...
       - name: Race detecor dummy2
