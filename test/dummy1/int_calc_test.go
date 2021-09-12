@@ -6,6 +6,6 @@ import (
 	"testing"
 )
 
-func TestConsumerRouter_Local(t *testing.T) {
+func TestFoo(t *testing.T) {
 	assert.EqualValues(t, 2, dummy1.Foo2(1))
 }
