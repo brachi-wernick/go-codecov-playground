@@ -1,5 +1,0 @@
-mode: atomic
-playground/internal/dummy1/intCalc.go:5.24,7.2 1 1
-playground/internal/pkg/utils/util.go:3.31,5.26 2 0
-playground/internal/pkg/utils/util.go:8.2,8.10 1 0
-playground/internal/pkg/utils/util.go:5.26,7.3 1 0
