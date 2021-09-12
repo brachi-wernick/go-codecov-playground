@@ -35,7 +35,7 @@ jobs:
       - name: Race detecor dummy1
         run: go test -race ./test/dummy1/...
       - name: CodeCov
-        run: go test -cover ./...  -coverprofile=coverage.out -coverpkg=$(go list ./internal/dummy1/... ./internal/pkg/... | grep -v test | tr "\n" ",") -covermode=atomic  -coverprofile=dummy1.coverage.out
+        run: go test -cover ./test/dummy1/...  -coverprofile=coverage.out -coverpkg=$(go list ./internal/dummy1/... ./internal/pkg/... | grep -v test | tr "\n" ",") -covermode=atomic  -coverprofile=dummy1.coverage.out
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1
 
@@ -67,3 +67,7 @@ jobs:
         run: go test -v ./test/dummy2/...
       - name: Race detecor dummy2
         run: go test -race ./test/dummy2/...
+      - name: CodeCov
+        run: go test -cover ./test/dummy2/...  -coverprofile=coverage.out -coverpkg=$(go list ./internal/dummy2/... ./internal/pkg/... | grep -v test | tr "\n" ",") -covermode=atomic  -coverprofile=dummy2.coverage.out
+     - name: Upload coverage to Codecov
+       uses: codecov/codecov-action@v1
